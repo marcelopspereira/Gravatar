@@ -17,7 +17,7 @@ namespace Gravatar.Tests
         public void ShoulValidateGravatar(string email, int? size, bool status)
         {
             var imageSize = size.HasValue ? size.Value.ToString() : "80";
-            var result = "http://www.gravatar.com/avatar/417bb1150463a0ebdd1a20eeb32113ca?s={imageSize}";
+            var result = $"https://www.gravatar.com/avatar/417bb1150463a0ebdd1a20eeb32113ca?s={imageSize}";
             Assert.AreEqual((email.ToGravatar(size ?? 80) == result), status);
         }
     }
