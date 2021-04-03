@@ -33,8 +33,4 @@ jobs:
         run: dotnet pack --configuration Release
 
       - name: Publish
-<<<<<<< HEAD
         run: dotnet nuget push "./Gravatar/${{ env.PROJECT_NAME }}/bin/Release/*.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json
-=======
-        run: dotnet nuget push "./Gravatar/bin/Release/Gravatar.1.0.0.nupkg" -k ${{ secrets.NUGET_TOKEN }} -s https://api.nuget.org/v3/index.json
->>>>>>> a90098f7b73eaffbacff8df4ce7ec19a0c9478eb
